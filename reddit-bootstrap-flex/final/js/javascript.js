@@ -105,12 +105,13 @@
 
             newRow.appendChild(node);
 
-            if (i % columns === 0) {
+            if (i % columns == 0) {
 
                 createRow(i);
                 rowName = "row" + (i) + "-";
 
             }
+
         }  // end data loop
     }
 
@@ -136,7 +137,6 @@
         });
 
         document.getElementById("query-range-selector").onchange = function () {
-
             queryLength = document.getElementById("query-range-selector").value;
             document.getElementById("query-range").innerHTML = queryLength - 1;
             init(queryLength);
