@@ -20,17 +20,17 @@
         xhr.send();
     }
 
-    function createARow () {
+    function createARow(articles) {
+        var cardsSection = document.getElementById("content-wrapper");
+
 
     }
 
-    function fillARow (articles) {
+    function fillARow(articles) {
         var node = {};
-        var newRow, cardsSection, cardTitle, title,
+        var newRow, cardTitle, title,
                 line, textNode, author, br, comments, i;
         var queryLength = 5;
-
-        cardsSection = document.getElementById("content-wrapper");
 
         for (i = 1; i < 5; i += 1) {
 
