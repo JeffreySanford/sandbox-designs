@@ -105,11 +105,9 @@
 
             newRow.appendChild(node);
 
-            if (i % columns == 0) {
-
-                createRow(i);
-                rowName = "row" + (i) + "-";
-
+            if (i % columns === 0) {
+                createRow(i / columns + 1);
+                rowName = "row" + (i / columns + 1) + "-";
             }
 
         }  // end data loop
