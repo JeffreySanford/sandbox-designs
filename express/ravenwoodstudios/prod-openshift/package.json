@@ -5,7 +5,7 @@
   "author": "Jeffrey Sanford",
   "email": "jeffrey_sanford@hotmail.com",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app.js"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
