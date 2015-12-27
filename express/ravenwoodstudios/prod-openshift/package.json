@@ -9,6 +9,7 @@
   "author": "Jeffrey Sanford",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "openshift-express": "0.0.1"
   }
 }
