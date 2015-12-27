@@ -5,15 +5,15 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('ravenwoodstudios:server');
+var debug = require('debug')('prod-openshift:server');
 var http = require('http');
-
+var PORT, IP_ADDRESS;
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+var IP_ADDRESS = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var PORT = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 
 /**
  * Create HTTP server.
@@ -24,8 +24,9 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-
-server.listen(port);
+server.listen(PORT, IP_ADDRESS, function() {
+  console.log("�? Express server listening on port %d in %s mode", PORT, app.settings.env);
+});
 server.on('error', onError);
 server.on('listening', onListening);
 
