@@ -9,7 +9,7 @@
     app.use(express.static(__dirname + '/images'));
     app.use(express.static(__dirname + '/stylesheets'));
     app.use(express.static(__dirname + '/javascript'));
-    
+
     app.set('view engine', 'ejs');
     app.set('views', __dirname + '/views');  // not required if default views
 
@@ -20,15 +20,11 @@
     app.get('*', function fail(req, res) {
         res.send('bad route found.');
     });
-
-
-//    var server = app.listen(3000, function listenFunct() {
-//        console.log('Server on port 3000');
         
-    var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
-    var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
- 
-    server.listen(server_port, server_ip_address, function () {
-    console.log( "Listening on " + server_ip_address + ", server_port " + server_port )
+    var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+    var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+
+    var server = app.listen(server_port, server_ip_address, function () {
+        console.log("Listening on " + server_ip_address + ", server_port " + server_port);
     });
 }());
