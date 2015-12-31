@@ -1,12 +1,16 @@
 <% if (title === 'Landing') { %>
-	<% console.log("users array triggered.")%>
+	<% if (usersObject !== 'undefined') {
+		console.log("users object triggered.")
+	} else {
+		console.error("users not found.");
+	} %>
 	<div class="array-insert">
 		<div class="row row-center">
 			<ul>
 				<% for (key in usersObject) { %>
 					<div class="col-lg-3 col-md-3 col-sm-4 text-center">
 						<li>
-							<img src="http://placehold.it/200x200">
+							<img src="https://placehold.it/200x200">
 							<p class="text-center"><%= usersObject[key].name %></p>
 						</li>
 					</div> <!--col class end -->
@@ -14,20 +18,46 @@
 			</ul>
 		</div> <!-- row class end -->
 	</div> <!--array-insert class end -->
-<% } else if (typeof(productsArray) !== 'undefined') { %>
-	<% console.log("products array trigged.")%>
-	<div class="array-insert">
-		<div class="row row-center">
-			<ul>
-				<% for (var i = 0; i<productsArray.length; i++) { %>
-				<div class="col-lg-3 col-md-3 col-sm-4 text-center">
-					<li>
-						<img src="http://placehold.it/200x200">
-						<p class="text-center"><%= productsArray[i] %></p>
-					</li>
-				</div>
-				<% } %>
-			</ul>
-		</div> <!--row class end -->
-	</div> <!--array-insert class end -->
+<% } else if (title === 'Products') { %>
+	<% if (productsObject !== 'undefined') {
+		console.log("products object trigged.")
+	} else {
+		console.error("productsObject not found.");
+	} %>
+	<div class="objects-insert">
+		<div id="center-the-bootstrap-row" class="row-centered">
+			<div class="row" style="margin: 2em 0;">
+				<ul>
+					<% for (key in productsObject) { %>
+						<% var url = '/products:' + productsObject[key].id; %>
+						<div id="product-box" class="col-lg-3 col-md-3 col-sm-4 text-center">
+							<li>
+								<a href= <%= url %>>
+									<img src="https://placehold.it/200x200">
+									<p class="text-center"><%= productsObject[key].productName %></p>
+								</a>
+							</li>
+						</div>
+					<% } %>
+				</ul>
+			</div> <!--row class end -->
+		</div> <!--row-center end -->
+	</div> <!--objects-insert class end -->
+<% } else if (title === 'Product') { 
+	console.log("product page trigged."); %>
+	<p>Requested Item is <%= item %></p>
+	<% for (key in productsObject) { %>
+		<% if (productsObject[key].id === item) { %>
+			<div style="width: 80%; margin: 0 auto;">
+				<img src="https://placehold.it/400x400" style="float: left;" />
+				<h2 style="text-align: center;">Product Name: <%= productsObject[key].productName %>
+				<br><br>
+				<p>Product Description: <%= productsObject[key].productDescription %></p>
+				<div class="clearfix"></div>
+				<br><br>
+				<p>Product image is not located at: <%= productsObject[key].productImage %></p>
+
+			</div>
+		<% } %>
+	<% } %>
 <% } %>

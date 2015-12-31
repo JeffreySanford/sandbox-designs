@@ -12,14 +12,15 @@ header {
 }
 header img {
 	width: 150px;
+	float:left;
 }
 
 header p {
-	flex-shrink: 0;
 	font-size: 1.5em;
 	top:50px;
 	margin-top: 30px; 
 	margin-left: 0;
+	float:left;
 }
 
 #topnav {
@@ -45,16 +46,29 @@ header p {
 	color: #C8A165;
 }
 
-.content {
-	text-align: justify;
+.active {
+	text-decoration: underline;
 }
 
-.array-insert {
-	margin: 2em 0;
+.content {
+
+}
+
+.objects-insert {
+
+}
+
+#product-box {
+
+}
+
+#product-box:hover {
+
 }
 
 .row-centered {
     text-align: center;
+    margin: 0 auto;
 }
 
 footer {
@@ -66,6 +80,19 @@ footer {
 footer i {
 	margin: 0 .1em;
 }
+
+footer ul {
+	text-align: center;
+}
+
+footer a {
+	color: black;
+}
+
+footer a:hover {
+	color: #C8A165;
+}
+
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the

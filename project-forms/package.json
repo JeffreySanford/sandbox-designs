@@ -1,0 +1,19 @@
+{
+  "name": "project-forms-sample",
+  "version": "1.0.0",
+  "description": "Simple HTML5 forms, stylized with bootstrap alpha and using the mongoDB model.",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "express-form": "^0.12.4"
+  },
+  "devDependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeffrey Sanford",
+  "license": "MIT"
+}
