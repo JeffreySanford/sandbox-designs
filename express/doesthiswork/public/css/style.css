@@ -1,0 +1,173 @@
+@import url(https://fonts.googleapis.com/css?family=Lora);
+* {
+    margin: 0;
+}
+body {
+	background: white;
+	width: 95%;
+    height:100%;
+	margin: 1em auto;
+    background-color: #AABBF3;
+	color: darkBlue;
+    font-family: 'Lora', serif;
+    font-weight: normal;
+}
+
+.header-style {
+    background-color: #B2D7FD;
+    padding: 1em;
+    color: black;
+}
+
+header h1, header p {
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    margin-before: 0em;
+    margin-after: 0em;
+}
+
+header p {
+    font-size: 1.6em;
+    margin-top: .3em;
+}
+
+header button {
+    float: right;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+header button:hover {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+
+#page-image {
+    width:80%;
+    text-align: right;
+}
+
+div.tooltip-inner {
+	width: 400px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    background-color: #505050;
+    font-size: 14px;
+}
+
+.content {
+    /*This content wrapper applies to all pages */
+    width: 95%;
+    margin: 0 auto;
+    background-color: #B2FDFC;
+
+}
+
+.content h3 {
+    padding: 10px 0 0 10px;
+}
+.content button {
+    margin: 0 2em 1em;
+}
+
+.content p {
+    font-size: 1.5em;
+}
+
+.content input, .content textarea {
+    background-color: #B2FDFC;
+    box-shadow: 2px 2px 3px #AABBF3;
+    color: black;
+}
+
+input[type="radio"] {
+    color white;
+    background-color: white;
+    box-shadow: none;
+}
+.user-identification {
+
+}
+
+.user-identification label {
+    margin-left: 2em;
+    font-size: 1.4em;
+}
+.user-identification input {
+    margin-left: 2em;
+    width: 80%;
+}
+
+#quality-report {
+    margin-left: 2em;
+}
+
+#comments {
+    width: 85%;
+    margin-left: 30px;
+}
+#comments-label {
+    margin-left: 30px;
+    font-size:1.5em;
+    font-weight: normal;
+}
+.report p {
+    font-size: 1.2em;
+ }
+
+ #report-wrapper {
+    margin: 10px 0;
+    padding:5px;
+ }
+
+ #report-wrapper:hover {
+    border: 1px solid teal;
+ }
+
+.rankings p {
+    font-size: 1.2em;
+    text-align: right;
+}
+
+.submit-record {
+    margin-left: 1em;
+    font-size: 1.4em;
+}
+
+.submit-record-text {
+    margin-left: 1em;
+    font-size: 1em;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: block-inline;
+}
+
+footer {
+    text-align: center;
+    font-size: 1.1em;
+    color: black;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: 2em auto;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+@media all and (max-width: 480px)  {
+    .visable {
+        display: hidden;
+    }
+}

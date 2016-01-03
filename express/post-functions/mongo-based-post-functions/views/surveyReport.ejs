@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title %></title>
+
+</head>
+<body>
+	<% console.log(surveyData); %>
+	<% console.log("Made it to the Records Page";) %>
+	<h1>Display All Records in Database</h1>
+	<% for (var i = 0; i<surveyData.length; i++) { %>
+	<p>Name: <%= surveyData[i].name %>	
+	<p>e-mail address: <%= surveyData[i].mail %>
+	<p>Comments: <%= surveyData[i].comments %>
+	<p>JS Timestampe: <%= surveyData[i].time %>
+	<% } %>
+	<p>Data End</p>
+</body>
+</html>

@@ -25,12 +25,12 @@
     var url = 'mongodb://heroku:NkL6X5rbM0meZE93wn5hHEE1yc5KDZnsffmOYObWmuBfBDnuDfWsbrs1zGk9DZKuoRw1KcGaf4zxOQ7j7EBVnA@candidate.62.mongolayer.com:10177,candidate.61.mongolayer.com:10488/app45648657';
     MongoClient.connect(url, function(err, db) {
         assert.equal(null, err);
-        console.log("Connected correctly to server.");
+        console.log("Connected correctly to mongodb server.");
     db.close();
     });
 
     app.get('/', routes.index);
-    app.post('/form', function(req, res) {
+    app.post('/form', function (req, res) {
         var realName = req.body.realName;
         var email = req.body.email;
         var inlineRadioReadability = req.body.inlineRadioReadbilty;

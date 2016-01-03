@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Simple HTML5 forms, stylized with bootstrap alpha and using the mongoDB model.",
   "main": "app.js",
+  "start": "node app.js",
   "dependencies": {
     "ejs": "^2.3.4",
-    "express-form": "^0.12.4"
+    "express-form": "^0.12.4",
+    "mongodb": "^2.1.2",
+    "mongoskin": "^2.0.3",
+    "monk": "^1.0.1"
   },
   "devDependencies": {
     "body-parser": "^1.14.2",
