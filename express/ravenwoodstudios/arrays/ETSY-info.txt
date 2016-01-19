@@ -1,5 +1,0 @@
-ETSY APP Name:  web-async-data-get
-KEYSTRING:  pt6kfi43rxolo04ehn33mem7
-SHARED SECRET:  sureoo0nr0
-SERVICE	PUBLIC RATE LIMITS	OAUTH RATE LIMITS (PER USER)	STATUS
-Production API	5 per sec.	5,000 per day	Disabled	Personal Access
